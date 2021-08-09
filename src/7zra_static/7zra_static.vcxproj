@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zCompressionMode.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zDecode.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zEncode.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zExtract.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zFolderInStream.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zHandler.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zHandlerOut.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zHeader.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zIn.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zOut.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zProperties.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zRegister.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zSpecStream.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\7z\7zUpdate.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\ArchiveExports.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\Common\CoderMixer2.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\Common\HandlerOut.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\Common\InStreamWithCRC.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\Common\ItemNameUtils.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\Common\OutStreamWithCRC.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\Common\ParseProperties.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Archive\DllExports2.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Bundles\Format7zR\StdAfx.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\CreateCoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\CWrappers.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\FileStreams.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\FilterCoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\InBuffer.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\InOutTempBuffer.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\LimitedStreams.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\MethodId.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\MethodProps.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\OutBuffer.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\ProgressUtils.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\PropId.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\StreamBinder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\StreamObjects.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\StreamUtils.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\UniqBlocks.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\VirtThread.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\Bcj2Coder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\Bcj2Register.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\BcjCoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\BcjRegister.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\BranchMisc.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\BranchRegister.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\ByteSwap.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\CodecExports.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\CopyCoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\CopyRegister.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\DeltaFilter.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\Lzma2Decoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\Lzma2Encoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\Lzma2Register.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\LzmaDecoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\LzmaEncoder.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Compress\LzmaRegister.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\CRC.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\CrcReg.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\IntToString.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\MyString.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\MyVector.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\NewHandler.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\StringConvert.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\StringToInt.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Common\Wildcard.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileDir.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileFind.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileIO.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileName.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\PropVariant.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\PropVariantConv.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\Synchronization.cpp" />
+    <ClCompile Include="..\lzmasdk\CPP\Windows\System.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zCompressionMode.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zDecode.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zEncode.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zFolderInStream.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zHandler.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zHeader.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zIn.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zItem.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zOut.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zProperties.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zSpecStream.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\7z\7zUpdate.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\Common\CoderMixer2.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\Common\HandlerOut.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\Common\InStreamWithCRC.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\Common\ItemNameUtils.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\Common\OutStreamWithCRC.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Archive\Common\ParseProperties.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Bundles\Format7zR\StdAfx.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\CreateCoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\CWrappers.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\FileStreams.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\FilterCoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\InBuffer.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\InOutTempBuffer.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\LimitedStreams.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\MethodId.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\MethodProps.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\OutBuffer.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\ProgressUtils.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\StreamBinder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\StreamObjects.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\StreamUtils.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\UniqBlocks.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\VirtThread.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\Bcj2Coder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\BcjCoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\BranchMisc.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\CopyCoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\Lzma2Decoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\Lzma2Encoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\LzmaDecoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Compress\LzmaEncoder.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\IntToString.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\MyString.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\MyVector.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\NewHandler.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\StringConvert.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\StringToInt.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Common\Wildcard.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileDir.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileFind.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileIO.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileName.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\PropVariant.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\PropVariantConv.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\Synchronization.h" />
+    <ClInclude Include="..\lzmasdk\CPP\Windows\System.h" />
+    <ClInclude Include="7zra_static.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{571c6a6e-1155-489a-8453-f50dbc695463}</ProjectGuid>
+    <RootNamespace>My7zrastatic</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_x64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_x64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(OutDir)7zc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(OutDir)7zc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(OutDir)7zc_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>$(OutDir)7zc_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

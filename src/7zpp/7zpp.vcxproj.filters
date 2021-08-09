@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="lzma-cpp">
+      <UniqueIdentifier>{a610d763-92ab-45dd-ac08-af9f259448a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzma-cpp\7zip">
+      <UniqueIdentifier>{ee0da777-bcfc-4601-bf76-5dab33ed3247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzma-cpp\Common">
+      <UniqueIdentifier>{5d6f9f5b-4d83-46cb-9e79-0065e791a946}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzma-cpp\Windows">
+      <UniqueIdentifier>{72ea6a3b-8c83-4b7c-a8b5-6b93477e92bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lzma-cpp\7zip\Common">
+      <UniqueIdentifier>{02085bea-5885-4359-805c-90666b077b9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="7zpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArchiveExtractCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArchiveOpenCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CArchiveUpdateCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\7zip\Common\FileStreams.h">
+      <Filter>lzma-cpp\7zip\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Common\IntToString.h">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Common\MyString.h">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Common\MyVector.h">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Common\NewHandler.h">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Common\StringConvert.h">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Common\Wildcard.h">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\DLL.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileDir.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileFind.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileIO.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\FileName.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\PropVariant.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\CPP\Windows\PropVariantConv.h">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="7zpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CArchiveExtractCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CArchiveOpenCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CArchiveUpdateCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\7zip\Common\FileStreams.cpp">
+      <Filter>lzma-cpp\7zip\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Common\IntToString.cpp">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Common\MyString.cpp">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Common\MyVector.cpp">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Common\NewHandler.cpp">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Common\StringConvert.cpp">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Common\Wildcard.cpp">
+      <Filter>lzma-cpp\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\DLL.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileDir.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileFind.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileIO.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\FileName.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\PropVariant.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\CPP\Windows\PropVariantConv.cpp">
+      <Filter>lzma-cpp\Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

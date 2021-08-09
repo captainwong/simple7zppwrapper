@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="C">
+      <UniqueIdentifier>{a82a9c54-898d-48cc-ac9c-e2e1e81ed70f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lzmasdk\C\7zCrc.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\7zCrcOpt.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Alloc.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Bcj2.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Bcj2Enc.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Bra.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Bra86.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\BraIA64.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\CpuArch.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Delta.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\LzFind.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\LzFindMt.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Lzma2Dec.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Lzma2DecMt.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Lzma2Enc.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\LzmaDec.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\LzmaEnc.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\MtCoder.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\MtDec.c">
+      <Filter>C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzmasdk\C\Threads.c">
+      <Filter>C</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lzmasdk\C\7zCrc.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Alloc.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Bcj2.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Bra.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\CpuArch.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Delta.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\LzFind.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\LzFindMt.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Lzma2Dec.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Lzma2DecMt.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Lzma2Enc.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\LzmaDec.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\LzmaEnc.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\MtCoder.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\MtDec.h">
+      <Filter>C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lzmasdk\C\Threads.h">
+      <Filter>C</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
