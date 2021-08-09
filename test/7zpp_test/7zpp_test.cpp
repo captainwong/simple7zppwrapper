@@ -1,5 +1,5 @@
 #include "../../src/7zpp/7zpp.h"
-
+#include <jlib/win32/UnicodeTool.h>
 
 #define TEST_7ZPP_WITH_7ZRA_STATIC
 
@@ -18,24 +18,24 @@
 void print_jfinfo(const jfile_info& jfi, int space = 0)
 {
 	if (jfi.isdir) {
-		printf("%*c%s\n", space, ' ', jfi.name.c_str());
+		printf("%*c%s\n", space, ' ', jlib::win32::utf16_to_mbcs(jfi.name).c_str());
 		for (const auto& sub : jfi.subitems) {
 			print_jfinfo(*sub, space + 2);
 		}
 	} else {
-		printf("%*c%s %llu\n", space, ' ', jfi.name.c_str(), jfi.size);
+		printf("%*c%s %llu\n", space, ' ', jlib::win32::utf16_to_mbcs(jfi.name).c_str(), jfi.size);
 	}
 }
 
 void test_compress()
 {
-	std::vector<std::string> files = {
-		R"(C:\Users\Jack\Documents\history.db3)",
-		R"(C:\Users\Jack\Documents\VersionNo.ini)",
-		R"(C:\Users\Jack\Documents\wx_server_2019-12-25_003732.sql)",
+	std::vector<std::wstring> files = {
+		LR"(C:\Users\Jack\Documents\history.db3)",
+		LR"(C:\Users\Jack\Documents\VersionNo.ini)",
+		LR"(C:\Users\Jack\Documents\wx_server_2019-12-25_003732.sql)",
 
 	};
-	auto res = j7zpp_compress_files(R"(C:\Users\Jack\Documents\out.7z)", files, R"(C:\Users\Jack\Documents)", [](uint64_t pos, uint64_t total) {
+	auto res = j7zpp_compress_files(LR"(C:\Users\Jack\Documents\out.7z)", files, LR"(C:\Users\Jack\Documents)", [](uint64_t pos, uint64_t total) {
 		printf("\r%llu/%llu", pos, total);
 	});
 
@@ -64,7 +64,7 @@ void test_compress()
 void test_list()
 {
 	jfile_info* files;
-	auto res = j7zpp_list_files(R"(C:\Users\Jack\Documents\out.7z)", &files);
+	auto res = j7zpp_list_files(LR"(C:\Users\Jack\Documents\out2.7z)", &files);
 
 	printf("\ndone\n");
 
@@ -96,16 +96,16 @@ void test_list()
 
 void test_extract_some()
 {
-	std::vector<std::string> files = {
-		R"(history.db3)",
-		R"(VersionNo.ini)",
-		R"(wx_server_2019-12-25_003732.sql)",
+	std::vector<std::wstring> files = {
+		LR"(history.db3)",
+		LR"(VersionNo.ini)",
+		LR"(wx_server_2019-12-25_003732.sql)",
 
 	};
 
-	auto res = j7zpp_extract_some(R"(C:\Users\Jack\Documents\out.7z)",
+	auto res = j7zpp_extract_some(LR"(C:\Users\Jack\Documents\out.7z)",
 								  files,
-								  R"(C:\Users\Jack\Documents\test_extract_some_out)",
+								  LR"(C:\Users\Jack\Documents\test_extract_some_out)",
 								  [](uint64_t pos, uint64_t total) {
 		printf("\r%llu/%llu", pos, total);
 	});

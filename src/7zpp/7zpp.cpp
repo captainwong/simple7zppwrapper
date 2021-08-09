@@ -103,15 +103,15 @@ static FString CmdStringToFString(const char* s)
     return us2fs(GetUnicodeString(s));
 }
 
-int j7zpp_compress_folder(const std::string& archive, const std::string& folder)
+int j7zpp_compress_folder(const std::wstring& archive, const std::wstring& folder)
 {
 	return 0;
 }
 
 
-j7zpp_res j7zpp_compress_files(const std::string& archive,
-                               const std::vector<std::string>& files,
-                               const std::string& dirPrefix4NotShowInArchive, 
+j7zpp_res j7zpp_compress_files(const std::wstring& archive,
+                               const std::vector<std::wstring>& files,
+                               const std::wstring& dirPrefix4NotShowInArchive, 
                                ArchiveUpdateProgressCallback cb)
 {
 #ifndef MY7ZPPWITH7ZRASTATIC_EXPORTS
@@ -131,7 +131,7 @@ j7zpp_res j7zpp_compress_files(const std::string& archive,
     CObjectVector<CDirItem> dirItems;
     for (const auto& file : files) {
         CDirItem di;
-        FString name = CmdStringToFString(file.c_str());
+        FString name = (file.c_str());
 
         NFind::CFileInfo fi;
         if (!fi.Find(name)) {
@@ -147,17 +147,17 @@ j7zpp_res j7zpp_compress_files(const std::string& archive,
         di.FullPath = name;
         
 
-        std::string basename;
+        std::wstring basename;
         auto pos = file.find(dirPrefix4NotShowInArchive);
         if (pos != std::string::npos) {
             basename = file.substr(dirPrefix4NotShowInArchive.size());
-            while (basename.front() == '\\' || basename.front() == '/') {
+            while (basename.front() == L'\\' || basename.front() == L'/') {
                 basename = basename.substr(1);
             }
         } else {
-            auto pos = file.find_last_of('\\');
+            auto pos = file.find_last_of(L'\\');
             if (pos == std::string::npos) {
-                pos = file.find_last_of('/');
+                pos = file.find_last_of(L'/');
             }
             if (pos != std::string::npos) {
                 basename = file.substr(pos + 1);
@@ -166,13 +166,13 @@ j7zpp_res j7zpp_compress_files(const std::string& archive,
             }
         }
         
-        di.Name = fs2us(CmdStringToFString(basename.c_str()));
+        di.Name = fs2us((basename.c_str()));
         dirItems.Add(di);
     }
 
     COutFileStream* outFileStreamSpec = new COutFileStream;
     CMyComPtr<IOutStream> outFileStream = outFileStreamSpec;
-    FString archiveName = CmdStringToFString(archive.c_str());
+    FString archiveName = (archive.c_str());
     if (!outFileStreamSpec->Create(archiveName, false))     {
         PrintError("can't create archive file");
         return j7zpp_res::create_file_fail;
@@ -250,7 +250,7 @@ j7zpp_res j7zpp_compress_files(const std::string& archive,
     return j7zpp_res::ok;
 }
 
-static bool jfi_find_dir(jfile_info& all, const std::string& dirname, jfile_info*& dir)
+static bool jfi_find_dir(jfile_info& all, const std::wstring& dirname, jfile_info*& dir)
 {
     for (const auto& jfi : all.subitems) {
         if (jfi->isdir) {
@@ -270,7 +270,7 @@ static bool jfi_find_dir(jfile_info& all, const std::string& dirname, jfile_info
     return true;
 }
 
-static void jfi_resolve_dir(jfile_info& all, const std::string& dir)
+static void jfi_resolve_dir(jfile_info& all, const std::wstring& dir)
 {
     auto pos = dir.find('\\');
     if (pos == std::string::npos) {
@@ -286,7 +286,7 @@ static void jfi_resolve_dir(jfile_info& all, const std::string& dir)
     }
 }
 
-static void jfi_resolve_file(jfile_info& all, const std::string& name, uint64_t size)
+static void jfi_resolve_file(jfile_info& all, const std::wstring& name, uint64_t size)
 {
     auto pos = name.find('\\');
     if (pos == std::string::npos) {
@@ -316,7 +316,7 @@ void j7zpp_release_jfile_info(jfile_info* jfi)
     }
 }
 
-j7zpp_res j7zpp_list_files(const std::string& archiveName_, jfile_info** jfinfo)
+j7zpp_res j7zpp_list_files(const std::wstring& archiveName_, jfile_info** jfinfo)
 {
 #ifdef MY7ZPPWITH7ZRASTATIC_EXPORTS
     CMyComPtr<IInArchive> archive;
@@ -348,7 +348,7 @@ j7zpp_res j7zpp_list_files(const std::string& archiveName_, jfile_info** jfinfo)
 
     CInFileStream* fileSpec = new CInFileStream;
     CMyComPtr<IInStream> file = fileSpec;
-    FString archiveName = CmdStringToFString(archiveName_.c_str());
+    FString archiveName = (archiveName_.c_str());
     if (!fileSpec->Open(archiveName)) {
         PrintError("Can not open archive file", archiveName);
         return j7zpp_res::open_file_fail;
@@ -375,7 +375,7 @@ j7zpp_res j7zpp_list_files(const std::string& archiveName_, jfile_info** jfinfo)
     if (numItems > 0) {
         all = *jfinfo = new jfile_info();
         all->isdir = true;
-        all->name = "/";
+        all->name = L"/";
     }
 
     for (UInt32 i = 0; i < numItems; i++) {
@@ -387,7 +387,7 @@ j7zpp_res j7zpp_list_files(const std::string& archiveName_, jfile_info** jfinfo)
             if (prop.vt == VT_BSTR) {
                 Print(prop.bstrVal);
                 std::wstring name(prop.bstrVal, SysStringLen(prop.bstrVal));
-                jfi_resolve_dir(*all, jlib::win32::utf16_to_mbcs(name));
+                jfi_resolve_dir(*all, (name));
             } else if (prop.vt != VT_EMPTY) {
                 Print("ERROR!");
                 continue;
@@ -406,7 +406,7 @@ j7zpp_res j7zpp_list_files(const std::string& archiveName_, jfile_info** jfinfo)
             if (prop.vt == VT_BSTR) {
                 Print(prop.bstrVal);
                 std::wstring name(prop.bstrVal, SysStringLen(prop.bstrVal));
-                jfi_resolve_file(*all, jlib::win32::utf16_to_mbcs(name), size);
+                jfi_resolve_file(*all, (name), size);
             } else if (prop.vt != VT_EMPTY) {
                 Print("ERROR!");
                 continue;
@@ -419,9 +419,9 @@ j7zpp_res j7zpp_list_files(const std::string& archiveName_, jfile_info** jfinfo)
     return j7zpp_res::ok;
 }
 
-j7zpp_res j7zpp_extract_some(const std::string& archiveName_, 
-                             const std::vector<std::string>& files_to_extract, 
-                             const std::string& out_dir,
+j7zpp_res j7zpp_extract_some(const std::wstring& archiveName_, 
+                             const std::vector<std::wstring>& files_to_extract, 
+                             const std::wstring& out_dir,
                              ArchiveExtractCallback cb)
 {
     if (files_to_extract.empty()) {
@@ -459,7 +459,7 @@ j7zpp_res j7zpp_extract_some(const std::string& archiveName_,
 
     CInFileStream* fileSpec = new CInFileStream;
     CMyComPtr<IInStream> file = fileSpec;
-    FString archiveName = CmdStringToFString(archiveName_.c_str());
+    FString archiveName = (archiveName_.c_str());
     if (!fileSpec->Open(archiveName)) {
         PrintError("Can not open archive file", archiveName);
         return j7zpp_res::open_file_fail;
@@ -496,9 +496,9 @@ j7zpp_res j7zpp_extract_some(const std::string& archiveName_,
             if (prop.vt == VT_BSTR) {
                 Print(prop.bstrVal);
                 std::wstring name(prop.bstrVal, SysStringLen(prop.bstrVal));
-                auto mbcsname = jlib::win32::utf16_to_mbcs(name);
+                //auto mbcsname = jlib::win32::utf16_to_mbcs(name);
                 for (const auto& name_ : files_to_extract) {
-                    if (name_ == mbcsname) {
+                    if (name_ == name) {
                         if (indices.size() >= files_to_extract.size()) {
                             return j7zpp_res::extract_find_file_fail;
                         }
@@ -524,7 +524,7 @@ j7zpp_res j7zpp_extract_some(const std::string& archiveName_,
     // Extract command
     CArchiveExtractCallback* extractCallbackSpec = new CArchiveExtractCallback;
     CMyComPtr<IArchiveExtractCallback> extractCallback(extractCallbackSpec);
-    extractCallbackSpec->Init(archive, CmdStringToFString(out_dir.c_str())); // second parameter is output folder path
+    extractCallbackSpec->Init(archive, (out_dir.c_str())); // second parameter is output folder path
     extractCallbackSpec->PasswordIsDefined = false;
     extractCallbackSpec->setArchiveUpdateProgressCallback(cb);
     // extractCallbackSpec->PasswordIsDefined = true;
